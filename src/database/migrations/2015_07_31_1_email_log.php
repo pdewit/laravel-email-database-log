@@ -15,11 +15,11 @@ class EmailLog extends Migration
         Schema::create('email_log', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('date');
-            $table->string('from')->nullable();
-            $table->string('to')->nullable();
-            $table->string('cc')->nullable();
-            $table->string('bcc')->nullable();
-            $table->string('subject');
+            $table->text('from')->nullable();
+            $table->text('to')->nullable();
+            $table->text('cc')->nullable();
+            $table->text('bcc')->nullable();
+            $table->text('subject');
             $table->text('body');
             $table->text('headers')->nullable();
             $table->text('attachments')->nullable();
