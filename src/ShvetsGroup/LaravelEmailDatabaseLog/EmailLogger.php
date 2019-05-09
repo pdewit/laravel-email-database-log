@@ -25,7 +25,7 @@ class EmailLogger
             'subject' => $message->getSubject(),
             'body' => $message->getBody(),
             'headers' => (string)$message->getHeaders(),
-            'attachments' => $message->getChildren() ? implode("\n\n", $message->getChildren()) : null,
+            'attachments' => '',
         ]);
     }
 
